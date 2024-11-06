@@ -46,12 +46,12 @@ const Product = ({ items, cart, setCart }) => {
                                         transition:Bounce
                                             /> */}
                                     <div key={product.id} className="col-lg-4 col-md-6 my-3">
-                                        <div className="card" style={{ width: '18rem', textAlign: 'center', }}>
+                                        <div className="card" style={{ width: '90%', textAlign: 'center', }}>
                                             <Link to={`/product/${product.id}`} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}><img src={product.imgSrc} className="card-img-top" alt="..." /></Link>
                                             <div className="card-body">
                                                 <h5 className="card-title">{product.title}</h5>
                                                 <p className="card-text">{product.description}</p>
-                                                <button className='btn btn-primary'>₹ {product.price}</button>
+                                                <button style={{margin:'5px'}}className='btn btn-primary'>₹ {product.price}</button>
                                                 <button onClick={()=>addToCart(product.id, product.price, product.title, product.description, product.imgSrc)} className='btn btn-success'>Add to Cart</button>
 
                                             </div>
